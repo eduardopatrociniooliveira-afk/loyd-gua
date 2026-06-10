@@ -1,0 +1,57 @@
+            width: 100%;
+            background-color: #e2e8f0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px 0;
+            height: 20px;
+        }
+
+        .status-progresso {
+            width: 100%;
+            height: 100%;
+            background-color: #22c55e;
+            animation: carregar 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes carregar {
+            from { width: 0%; }
+            to { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="avatar-placeholder">🚰</div>
+        <h1>Lloyd Frontera</h1>
+        <p class="subtitle">O Maior Engenheiro de Obras Públicas</p>
+        
+        <div class="slogan-box">
+            <p class="slogan-text">"Água limpa não é milagre, é engenharia! Cavando o futuro do nosso território."</p>
+        </div>
+
+        <button class="btn" onclick="iniciarCampanha()">Iniciar Campanha da Água</button>
+
+        <div id="campanha" class="campanha-secao">
+            <p class="campanha-titulo">🚀 Aqueduto Construído com Sucesso!</p>
+            <p>O fluxo de água foi normalizado na região.</p>
+            <div class="status-bar">
+                <div class="status-progresso"></div>
+            </div>
+            <p style="color: #16a34a; font-weight: bold;">Eficiência: 100%</p>
+        </div>
+    </div>
+
+    <script>
+        function iniciarCampanha() {
+            document.getElementById('campanha').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
